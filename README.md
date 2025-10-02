@@ -1,2 +1,0 @@
-# HabitApp
-proyecto SENA
