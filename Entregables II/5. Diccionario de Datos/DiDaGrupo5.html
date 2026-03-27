@@ -53,7 +53,7 @@
 <div id="title-sect">
 <h1>mydb<br> Data Dictionay</h1>
 <p>
-<em>2025-11-20</em>
+<em>2025-12-08</em>
 </p>
 <p class="proj-desc">
 <em></em>
@@ -61,77 +61,22 @@
 </div>
 <h2>Alphabetic Index</h2>
 <ul>
-<li><a href='#Administrador'>Administrador</a></li>
 <li><a href='#Administrador_has_Articulo'>Administrador_has_Articulo</a></li>
-<li><a href='#Articulo'>Articulo</a></li>
-<li><a href='#Comentario'>Comentario</a></li>
-<li><a href='#Entrenador'>Entrenador</a></li>
-<li><a href='#Foro'>Foro</a></li>
+<li><a href='#Administradores'>Administradores</a></li>
+<li><a href='#Articulos'>Articulos</a></li>
+<li><a href='#Comentarios'>Comentarios</a></li>
+<li><a href='#Entrenadores'>Entrenadores</a></li>
 <li><a href='#Foro_has_Administrador'>Foro_has_Administrador</a></li>
-<li><a href='#Habito'>Habito</a></li>
-<li><a href='#Planeamiento'>Planeamiento</a></li>
-<li><a href='#Ranking'>Ranking</a></li>
-<li><a href='#Recordatorio'>Recordatorio</a></li>
-<li><a href='#Rol'>Rol</a></li>
-<li><a href='#Seguimiento'>Seguimiento</a></li>
-<li><a href='#Usuario'>Usuario</a></li>
+<li><a href='#Foros'>Foros</a></li>
+<li><a href='#Habitos'>Habitos</a></li>
+<li><a href='#Planeamientos'>Planeamientos</a></li>
+<li><a href='#Rankings'>Rankings</a></li>
+<li><a href='#Recordatorios'>Recordatorios</a></li>
+<li><a href='#Roles'>Roles</a></li>
+<li><a href='#Seguimientos'>Seguimientos</a></li>
 <li><a href='#Usuario_has_Foro'>Usuario_has_Foro</a></li>
+<li><a href='#Usuarios'>Usuarios</a></li>
 </ul>
-<table id='Administrador'>
-<caption>Administrador</caption>
-<tr><td colspan='11'></td></tr>
-<tr>
-    <th>Column name</th>
-    <th>DataType</th>
-    <th><abbr title='Primary Key'>PK</abbr></th>
-    <th><abbr title='Not Null'>NN</abbr></th>
-    <th><abbr title='Unique'>UQ</abbr></th>
-    <th><abbr title='Binary'>BIN</abbr></th>
-    <th><abbr title='Unsigned'>UN</abbr></th>
-    <th><abbr title='Zero Fill'>ZF</abbr></th>
-    <th><abbr title='Auto Increment'>AI</abbr></th>
-    <th>Default</th>
-    <th>Comment</th>
-</tr>
-<tr>
-    <td>idAdministrador</td>
-    <td>INT</td>
-    <td>&#10004;</td>
-    <td>&#10004;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td class='attr'>&nbsp;</td>
-    <td></td>
-    <td></td>
-</tr>
-<tr>
-    <td>estadoAdmin</td>
-    <td>VARCHAR(45)</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td class='attr'>&nbsp;</td>
-    <td></td>
-    <td></td>
-</tr>
-<tr>
-    <td>idUsuario</td>
-    <td>INT</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td class='attr'>&nbsp;</td>
-    <td></td>
-    <td></td>
-</tr>
 <table id='Administrador_has_Articulo'>
 <caption>Administrador_has_Articulo</caption>
 <tr><td colspan='11'></td></tr>
@@ -159,7 +104,7 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td></td>
+    <td>Identificador numerico unico para cada vinculo entre un administrador y un articulo. Permite distinguir cada instancia de gestion o moderacion.</td>
 </tr>
 <tr>
     <td>Administrador_idAdministrador</td>
@@ -172,7 +117,8 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td></td>
+    <td>Identificador del administrador vinculado al articulo. Establece la relacion con la tabla Administradores.
+</td>
 </tr>
 <tr>
     <td>Articulo_idArticulo</td>
@@ -185,10 +131,67 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td></td>
+    <td>Identificador del articulo gestionado por el administrador. Establece la relacion con la tabla Articulos.
+</td>
 </tr>
-<table id='Articulo'>
-<caption>Articulo</caption>
+<table id='Administradores'>
+<caption>Administradores</caption>
+<tr><td colspan='11'></td></tr>
+<tr>
+    <th>Column name</th>
+    <th>DataType</th>
+    <th><abbr title='Primary Key'>PK</abbr></th>
+    <th><abbr title='Not Null'>NN</abbr></th>
+    <th><abbr title='Unique'>UQ</abbr></th>
+    <th><abbr title='Binary'>BIN</abbr></th>
+    <th><abbr title='Unsigned'>UN</abbr></th>
+    <th><abbr title='Zero Fill'>ZF</abbr></th>
+    <th><abbr title='Auto Increment'>AI</abbr></th>
+    <th>Default</th>
+    <th>Comment</th>
+</tr>
+<tr>
+    <td>idAdministrador</td>
+    <td>INT</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Identificador numerico unico para cada administrador registrado. Permite distinguir los perfiles con privilegios especiales dentro del sistema.</td>
+</tr>
+<tr>
+    <td>estadoAdmin</td>
+    <td>VARCHAR(45)</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Estado actual del administrador ( Activo, Suspendido). Indica si el perfil tiene acceso operativo al sistema.</td>
+</tr>
+<tr>
+    <td>idUsuario</td>
+    <td>INT</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Identificador del usuario vinculado al perfil de administrador. Establece la relacion con la tabla Usuarios para heredar credenciales y datos personales.
+</td>
+</tr>
+<table id='Articulos'>
+<caption>Articulos</caption>
 <tr><td colspan='11'></td></tr>
 <tr>
     <th>Column name</th>
@@ -214,7 +217,7 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td></td>
+    <td>Identificador numerico unico para cada articulo registrado. Permite distinguir cada publicacion dentro del sistema.</td>
 </tr>
 <tr>
     <td>titulo</td>
@@ -227,7 +230,8 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td></td>
+    <td>Titulo breve y representativo del articulo. Resume el contenido principal y facilita su identificacion.
+</td>
 </tr>
 <tr>
     <td>contenido</td>
@@ -240,7 +244,7 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td></td>
+    <td>Texto completo del articulo. Puede incluir informacion, analisis, recomendaciones o reflexiones segun el proposito del sistema.</td>
 </tr>
 <tr>
     <td>fechaPublicacion</td>
@@ -253,10 +257,10 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td></td>
+    <td>Fecha en la que se publica el articulo. Es util para organizar cronologicamente el contenido y evaluar su vigencia.</td>
 </tr>
-<table id='Comentario'>
-<caption>Comentario</caption>
+<table id='Comentarios'>
+<caption>Comentarios</caption>
 <tr><td colspan='11'></td></tr>
 <tr>
     <th>Column name</th>
@@ -282,7 +286,7 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td></td>
+    <td>Identificador numerico unico para cada comentario registrado. Permite distinguir cada intervencion dentro del foro.</td>
 </tr>
 <tr>
     <td>contenido</td>
@@ -295,7 +299,7 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td></td>
+    <td>Texto que contiene el mensaje del comentario. Refleja la opinion, pregunta o aporte del usuario en el foro.</td>
 </tr>
 <tr>
     <td>fechaPublicacion</td>
@@ -308,7 +312,7 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td></td>
+    <td>Fecha en la que se publica el comentario. Es util para organizar cronologicamente las participaciones.</td>
 </tr>
 <tr>
     <td>idForo</td>
@@ -321,10 +325,11 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td></td>
+    <td>Identificador del foro al que pertenece el comentario. Establece la relacion con la tabla Foro para agrupar las discusiones.
+</td>
 </tr>
-<table id='Entrenador'>
-<caption>Entrenador</caption>
+<table id='Entrenadores'>
+<caption>Entrenadores</caption>
 <tr><td colspan='11'></td></tr>
 <tr>
     <th>Column name</th>
@@ -350,59 +355,7 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td></td>
-</tr>
-<tr>
-    <td>nombre</td>
-    <td>VARCHAR(45)</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td class='attr'>&nbsp;</td>
-    <td></td>
-    <td></td>
-</tr>
-<tr>
-    <td>correo</td>
-    <td>VARCHAR(45)</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td class='attr'>&nbsp;</td>
-    <td></td>
-    <td></td>
-</tr>
-<tr>
-    <td>contraseña</td>
-    <td>VARCHAR(45)</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td class='attr'>&nbsp;</td>
-    <td></td>
-    <td></td>
-</tr>
-<tr>
-    <td>genero</td>
-    <td>ENUM("Hombre", "Mujer")</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td class='attr'>&nbsp;</td>
-    <td></td>
-    <td></td>
+    <td>Identificador numerico unico para cada entrenador registrado en el sistema. Permite distinguirlos y establecer relaciones con otras entidades.</td>
 </tr>
 <tr>
     <td>especialidad</td>
@@ -415,7 +368,8 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td></td>
+    <td>Area de conocimiento o enfoque profesional del entrenador (Nutricion, Fitness, Mindfulness). Facilita la asignacion de habitos o usuarios segun perfil.
+</td>
 </tr>
 <tr>
     <td>idUsuario</td>
@@ -428,75 +382,7 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td></td>
-</tr>
-<table id='Foro'>
-<caption>Foro</caption>
-<tr><td colspan='11'></td></tr>
-<tr>
-    <th>Column name</th>
-    <th>DataType</th>
-    <th><abbr title='Primary Key'>PK</abbr></th>
-    <th><abbr title='Not Null'>NN</abbr></th>
-    <th><abbr title='Unique'>UQ</abbr></th>
-    <th><abbr title='Binary'>BIN</abbr></th>
-    <th><abbr title='Unsigned'>UN</abbr></th>
-    <th><abbr title='Zero Fill'>ZF</abbr></th>
-    <th><abbr title='Auto Increment'>AI</abbr></th>
-    <th>Default</th>
-    <th>Comment</th>
-</tr>
-<tr>
-    <td>idForo</td>
-    <td>INT</td>
-    <td>&#10004;</td>
-    <td>&#10004;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td class='attr'>&nbsp;</td>
-    <td></td>
-    <td></td>
-</tr>
-<tr>
-    <td>titulo</td>
-    <td>VARCHAR(45)</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td class='attr'>&nbsp;</td>
-    <td></td>
-    <td></td>
-</tr>
-<tr>
-    <td>descripcion</td>
-    <td>VARCHAR(45)</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td class='attr'>&nbsp;</td>
-    <td></td>
-    <td></td>
-</tr>
-<tr>
-    <td>fechaCreacion</td>
-    <td>DATE</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td class='attr'>&nbsp;</td>
-    <td></td>
-    <td></td>
+    <td>Identificador del usuario vinculado al entrenador. Establece la relacion entre el perfil de entrenador y su cuenta en el sistema.</td>
 </tr>
 <table id='Foro_has_Administrador'>
 <caption>Foro_has_Administrador</caption>
@@ -525,7 +411,7 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td></td>
+    <td>Identificador numerico unico para cada vinculo entre un foro y un administrador. Permite distinguir cada asignacion de moderacion.</td>
 </tr>
 <tr>
     <td>Foro_idForo</td>
@@ -538,7 +424,8 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td></td>
+    <td>Identificador del foro asignado al administrador. Establece la relacion con la tabla Foros.
+</td>
 </tr>
 <tr>
     <td>Administrador_idAdministrador</td>
@@ -551,10 +438,79 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td></td>
+    <td>Identificador del administrador vinculado al foro. Establece la relacion con la tabla Administradores.
+</td>
 </tr>
-<table id='Habito'>
-<caption>Habito</caption>
+<table id='Foros'>
+<caption>Foros</caption>
+<tr><td colspan='11'></td></tr>
+<tr>
+    <th>Column name</th>
+    <th>DataType</th>
+    <th><abbr title='Primary Key'>PK</abbr></th>
+    <th><abbr title='Not Null'>NN</abbr></th>
+    <th><abbr title='Unique'>UQ</abbr></th>
+    <th><abbr title='Binary'>BIN</abbr></th>
+    <th><abbr title='Unsigned'>UN</abbr></th>
+    <th><abbr title='Zero Fill'>ZF</abbr></th>
+    <th><abbr title='Auto Increment'>AI</abbr></th>
+    <th>Default</th>
+    <th>Comment</th>
+</tr>
+<tr>
+    <td>idForo</td>
+    <td>INT</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Identificador numerico unico para cada foro creado en el sistema. Permite distinguir los espacios de discusion.</td>
+</tr>
+<tr>
+    <td>titulo</td>
+    <td>VARCHAR(45)</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Titulo breve y representativo del foro. Resume el tema central de discusion.</td>
+</tr>
+<tr>
+    <td>descripcion</td>
+    <td>VARCHAR(45)</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Texto que amplia el contenido o proposito del foro. Brinda contexto adicional para los participantes.</td>
+</tr>
+<tr>
+    <td>fechaCreacion</td>
+    <td>DATE</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Fecha en la que se creo el foro. Es util para organizar cronologicamente los espacios de discusion.</td>
+</tr>
+<table id='Habitos'>
+<caption>Habitos</caption>
 <tr><td colspan='11'></td></tr>
 <tr>
     <th>Column name</th>
@@ -580,7 +536,7 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td></td>
+    <td>Identificador numerico unico para cada habito registrado. Permite distinguir y relacionar los habitos con otros elementos del sistema.</td>
 </tr>
 <tr>
     <td>nombre</td>
@@ -593,7 +549,7 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td></td>
+    <td>Nombre breve y representativo del habito ( Correr, Meditar, dormir). Facilita su visualizacion y gestion por parte del usuario.</td>
 </tr>
 <tr>
     <td>descripcion</td>
@@ -606,7 +562,7 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td></td>
+    <td>Texto explicativo que detalla el proposito o caracteristicas del habito. Brinda contexto adicional para su seguimiento.</td>
 </tr>
 <tr>
     <td>categoria</td>
@@ -619,7 +575,7 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td></td>
+    <td>Clasificacion tematica del habito (Salud, Educacion, Tiempo libre). Permite organizar y filtrar los habitos por tipo.</td>
 </tr>
 <tr>
     <td>fechaInicio</td>
@@ -632,7 +588,7 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td></td>
+    <td>Fecha en la que el usuario inicia el seguimiento del habito. Es clave para calcular progresos y metricas temporales.</td>
 </tr>
 <tr>
     <td>estado</td>
@@ -645,11 +601,11 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td></td>
+    <td>Valor categorico que indica la situacion actual del habito (Activo, Completado, Pendiente).</td>
 </tr>
 <tr>
     <td>puntos</td>
-    <td>VARCHAR(45)</td>
+    <td>INT</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
@@ -658,7 +614,7 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td></td>
+    <td>Valor numerico que representa la recompensa o avance asociado al habito. Puede usarse para rankings o motivacion.</td>
 </tr>
 <tr>
     <td>idUsuario</td>
@@ -671,10 +627,11 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td></td>
+    <td>Identificador del usuario que creo o esta siguiendo el habito. Se vincula con la tabla Usuarios para establecer la relacion.
+</td>
 </tr>
-<table id='Planeamiento'>
-<caption>Planeamiento</caption>
+<table id='Planeamientos'>
+<caption>Planeamientos</caption>
 <tr><td colspan='11'></td></tr>
 <tr>
     <th>Column name</th>
@@ -700,7 +657,7 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td></td>
+    <td>Identificador numerico unico para cada planeamiento registrado. Permite distinguir y organizar las sesiones o estrategias disenadas por los entrenadores.</td>
 </tr>
 <tr>
     <td>tipo</td>
@@ -713,7 +670,7 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td></td>
+    <td>Valor categorico que indica la naturaleza del planeamiento (Rutina, Sesion, Evaluacion). Facilita la clasificacion de actividades.</td>
 </tr>
 <tr>
     <td>descripcion</td>
@@ -726,7 +683,7 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td></td>
+    <td>Texto breve que resume el contenido o enfoque del planeamiento. Ayuda a identificar rapidamente su proposito.</td>
 </tr>
 <tr>
     <td>duracion</td>
@@ -739,7 +696,7 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td></td>
+    <td>Tiempo estimado en minutos que toma ejecutar el planeamiento. Es util para la programacion y gestion del tiempo.</td>
 </tr>
 <tr>
     <td>objetivo</td>
@@ -752,7 +709,7 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td></td>
+    <td>Detalle del proposito especifico del planeamiento, incluyendo metas, resultados esperados o competencias a desarrollar.</td>
 </tr>
 <tr>
     <td>idEntrenador</td>
@@ -765,10 +722,10 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td></td>
+    <td>Identificador del entrenador responsable del planeamiento. Establece la relacion con la tabla Entrenadores para vincular la estrategia con su autor.</td>
 </tr>
-<table id='Ranking'>
-<caption>Ranking</caption>
+<table id='Rankings'>
+<caption>Rankings</caption>
 <tr><td colspan='11'></td></tr>
 <tr>
     <th>Column name</th>
@@ -794,7 +751,7 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td></td>
+    <td>Identificador numerico unico para cada registro de ranking. Permite distinguir posiciones individuales dentro del sistema.</td>
 </tr>
 <tr>
     <td>posicion</td>
@@ -807,7 +764,7 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td></td>
+    <td>Numero que representa el lugar que ocupa el usuario en el ranking general. Se asigna segun los puntos acumulados.</td>
 </tr>
 <tr>
     <td>puntosTotales</td>
@@ -820,10 +777,10 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td></td>
+    <td>Suma total de puntos obtenidos por el usuario a lo largo de sus actividades o habitos. Sirve como criterio para ordenar el ranking.</td>
 </tr>
-<table id='Recordatorio'>
-<caption>Recordatorio</caption>
+<table id='Recordatorios'>
+<caption>Recordatorios</caption>
 <tr><td colspan='11'></td></tr>
 <tr>
     <th>Column name</th>
@@ -849,7 +806,7 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td></td>
+    <td>Identificador numerico unico para cada recordatorio creado en el sistema. Permite distinguirlos y establecer relaciones con habitos especificos.</td>
 </tr>
 <tr>
     <td>mensaje</td>
@@ -862,7 +819,7 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td></td>
+    <td>Texto que contiene el contenido del recordatorio. Puede incluir instrucciones, motivaciones o alertas para el usuario.</td>
 </tr>
 <tr>
     <td>frecuencia</td>
@@ -875,7 +832,7 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td></td>
+    <td>Indica la periodicidad con la que se activa el recordatorio (Diario, Semanal, Mensual). Facilita la programacion de alertas.</td>
 </tr>
 <tr>
     <td>idHabito</td>
@@ -888,10 +845,10 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td></td>
+    <td>Identificador del habito al que esta asociado el recordatorio. Establece la relacion con la tabla Habitos para activar notificaciones vinculadas.</td>
 </tr>
-<table id='Rol'>
-<caption>Rol</caption>
+<table id='Roles'>
+<caption>Roles</caption>
 <tr><td colspan='11'></td></tr>
 <tr>
     <th>Column name</th>
@@ -917,7 +874,7 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td></td>
+    <td>Identificador numerico unico para cada rol registrado en el sistema, permite distinguir y relacionar los roles con otras entidades.</td>
 </tr>
 <tr>
     <td>nombreRol</td>
@@ -930,7 +887,7 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td></td>
+    <td>Nombre corto y representativo del rol (Administrador Usuario) facilita la asignacion y visualizacion de permisos.</td>
 </tr>
 <tr>
     <td>descripcion</td>
@@ -943,7 +900,7 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td></td>
+    <td>Texto descriptivo que amplia el proposito o alcance del rol dentro del sistema, brinda contexto adicional para su uso.</td>
 </tr>
 <tr>
     <td>permisos</td>
@@ -956,10 +913,10 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td></td>
+    <td>Lista o referencia textual de los permisos asociados al rol. Puede incluir acciones permitidas o modulos accesibles.</td>
 </tr>
-<table id='Seguimiento'>
-<caption>Seguimiento</caption>
+<table id='Seguimientos'>
+<caption>Seguimientos</caption>
 <tr><td colspan='11'></td></tr>
 <tr>
     <th>Column name</th>
@@ -985,7 +942,7 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td></td>
+    <td>Identificador numerico unico para cada seguimiento registrado. Permite distinguir cada instancia de evaluacion o control dentro del sistema.</td>
 </tr>
 <tr>
     <td>fecha</td>
@@ -998,7 +955,7 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td></td>
+    <td>Fecha en la que se realiza el seguimiento. Es clave para establecer la cronologia del progreso del usuario.</td>
 </tr>
 <tr>
     <td>progreso</td>
@@ -1011,7 +968,7 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td></td>
+    <td>Texto que describe el avance del usuario respecto a sus habitos o metas. Puede incluir metricas, logros o cambios observados.</td>
 </tr>
 <tr>
     <td>observaciones</td>
@@ -1024,7 +981,7 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td></td>
+    <td>Comentarios adicionales del entrenador sobre el estado del usuario, recomendaciones o aspectos relevantes del seguimiento.</td>
 </tr>
 <tr>
     <td>idEntrenador</td>
@@ -1037,140 +994,8 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td></td>
-</tr>
-<table id='Usuario'>
-<caption>Usuario</caption>
-<tr><td colspan='11'></td></tr>
-<tr>
-    <th>Column name</th>
-    <th>DataType</th>
-    <th><abbr title='Primary Key'>PK</abbr></th>
-    <th><abbr title='Not Null'>NN</abbr></th>
-    <th><abbr title='Unique'>UQ</abbr></th>
-    <th><abbr title='Binary'>BIN</abbr></th>
-    <th><abbr title='Unsigned'>UN</abbr></th>
-    <th><abbr title='Zero Fill'>ZF</abbr></th>
-    <th><abbr title='Auto Increment'>AI</abbr></th>
-    <th>Default</th>
-    <th>Comment</th>
-</tr>
-<tr>
-    <td>idUsuario</td>
-    <td>INT</td>
-    <td>&#10004;</td>
-    <td>&#10004;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td class='attr'>&nbsp;</td>
-    <td></td>
-    <td></td>
-</tr>
-<tr>
-    <td>nombre</td>
-    <td>VARCHAR(45)</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td class='attr'>&nbsp;</td>
-    <td></td>
-    <td></td>
-</tr>
-<tr>
-    <td>correo</td>
-    <td>VARCHAR(20)</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td class='attr'>&nbsp;</td>
-    <td></td>
-    <td></td>
-</tr>
-<tr>
-    <td>contraseña</td>
-    <td>VARCHAR(45)</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td class='attr'>&nbsp;</td>
-    <td></td>
-    <td></td>
-</tr>
-<tr>
-    <td>edad</td>
-    <td>INT</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td class='attr'>&nbsp;</td>
-    <td></td>
-    <td></td>
-</tr>
-<tr>
-    <td>genero</td>
-    <td>ENUM("Hombre", "Mujer")</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td class='attr'>&nbsp;</td>
-    <td></td>
-    <td></td>
-</tr>
-<tr>
-    <td>idRanking</td>
-    <td>INT</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td class='attr'>&nbsp;</td>
-    <td></td>
-    <td></td>
-</tr>
-<tr>
-    <td>Reporte_idReporte</td>
-    <td>INT</td>
-    <td>&nbsp;</td>
-    <td>&#10004;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td class='attr'>&nbsp;</td>
-    <td></td>
-    <td></td>
-</tr>
-<tr>
-    <td>idRol</td>
-    <td>INT</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td class='attr'>&nbsp;</td>
-    <td></td>
-    <td></td>
+    <td>Identificador del entrenador que realiza el seguimiento. Establece la relacion con la tabla Entrenadores para vincular la evaluacion con el responsable.
+</td>
 </tr>
 <table id='Usuario_has_Foro'>
 <caption>Usuario_has_Foro</caption>
@@ -1199,7 +1024,7 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td></td>
+    <td>Identificador numerico unico para cada vinculo entre un usuario y un foro. Permite distinguir cada participacion individual.</td>
 </tr>
 <tr>
     <td>Usuario_idUsuario</td>
@@ -1212,7 +1037,8 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td></td>
+    <td>Identificador del usuario que participa en el foro. Establece la relacion con la tabla Usuarios.
+</td>
 </tr>
 <tr>
     <td>Foro_idForo</td>
@@ -1225,7 +1051,144 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
+    <td>Identificador del foro en el que participa el usuario. Establece la relacion con la tabla Foro.
+</td>
+</tr>
+<table id='Usuarios'>
+<caption>Usuarios</caption>
+<tr><td colspan='11'></td></tr>
+<tr>
+    <th>Column name</th>
+    <th>DataType</th>
+    <th><abbr title='Primary Key'>PK</abbr></th>
+    <th><abbr title='Not Null'>NN</abbr></th>
+    <th><abbr title='Unique'>UQ</abbr></th>
+    <th><abbr title='Binary'>BIN</abbr></th>
+    <th><abbr title='Unsigned'>UN</abbr></th>
+    <th><abbr title='Zero Fill'>ZF</abbr></th>
+    <th><abbr title='Auto Increment'>AI</abbr></th>
+    <th>Default</th>
+    <th>Comment</th>
+</tr>
+<tr>
+    <td>idUsuario</td>
+    <td>INT</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
     <td></td>
+    <td>Identificador numerico unico para cada usuario registrado en el sistema. Permite establecer relaciones con otras entidades.</td>
+</tr>
+<tr>
+    <td>nombre</td>
+    <td>VARCHAR(45)</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Nombre propio del usuario. Se utiliza para la identificacion visual y personalizada dentro de la aplicacion.</td>
+</tr>
+<tr>
+    <td>apellido</td>
+    <td>VARCHAR(20)</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Apellido del usuario. Complementa la informacion personal para una identificacion completa.
+</td>
+</tr>
+<tr>
+    <td>correo</td>
+    <td>VARCHAR(20)</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Direccion de correo electronico del usuario. Sirve como medio de contacto y autenticacion.</td>
+</tr>
+<tr>
+    <td>contraseña</td>
+    <td>VARCHAR(45)</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Cadena cifrada que permite el acceso seguro al sistema. Debe cumplir con criterios de seguridad definidos.</td>
+</tr>
+<tr>
+    <td>genero</td>
+    <td>ENUM("Hombre", "Mujer")</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Valor categorico que representa el genero del usuario. Puede incluir opciones como Masculino, Femenino.</td>
+</tr>
+<tr>
+    <td>idRanking</td>
+    <td>INT</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Referencia al nivel o clasificacion del usuario dentro del sistema. Se relaciona con la tabla Ranking.
+</td>
+</tr>
+<tr>
+    <td>Reporte_idReporte</td>
+    <td>INT</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Identificador del reporte asociado al usuario, si aplica. Se vincula con la tabla Reporte.</td>
+</tr>
+<tr>
+    <td>idRol</td>
+    <td>INT</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Identificador del rol asignado al usuario. Determina los permisos y accesos dentro del sistema, vinculado a la tabla Roles.
+</td>
 </tr>
 </table>
 </body>
